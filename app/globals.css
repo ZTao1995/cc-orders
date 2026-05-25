@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  background: #ece6d8;
+  color: #2a2823;
+  font-family: 'Inter Tight', ui-sans-serif, sans-serif;
+}
+
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+.display {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper {
+  background-color: #ece6d8;
+  background-image:
+    radial-gradient(rgba(42,40,35,0.04) 1px, transparent 1px),
+    radial-gradient(rgba(42,40,35,0.03) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 1px;
+}
+
+.hairline { border-color: #a8a294; }
+.hairline-strong { border-color: #2a2823; }
+.accent-color { color: #a8341f; }
+.accent-bg { background: #a8341f; }
+.ink-soft { color: #5a564c; }
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid #2a2823;
+  color: #2a2823;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #2a2823;
+  color: #ece6d8;
+  padding: 16px 20px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 11px;
+  transition: background 0.15s ease, transform 0.1s ease;
+  border: none;
+}
+.btn-primary:hover { background: #a8341f; }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled { background: #a8a294; color: #ece6d8; cursor: not-allowed; }
+
+.btn-ghost {
+  background: transparent;
+  color: #2a2823;
+  border: 1px solid #2a2823;
+  padding: 10px 14px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.btn-ghost:hover { background: #2a2823; color: #ece6d8; }
+
+input::placeholder { color: #a8a294; }
+
+@keyframes slidein {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slidein { animation: slidein 0.3s ease; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.blink { animation: blink 1.4s infinite; }
