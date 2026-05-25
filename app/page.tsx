@@ -155,10 +155,6 @@ function Landing({ onNavigate }: { onNavigate: (v: "landing" | "customer" | "sta
               </div>
             </button>
           </div>
-
-          <div className="mono text-[9px] tracking-[0.25em] ink-soft mt-14 leading-relaxed">
-            QR CODE TO ?VIEW=ORDER FOR GUESTS<br />— BOOKMARK ?VIEW=STAFF FOR THE FLOOR
-          </div>
         </div>
       </div>
     </div>
