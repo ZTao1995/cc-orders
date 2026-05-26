@@ -489,11 +489,8 @@ function StaffView({ tick, onBack }: { tick: number; onBack: () => void }) {
               <div className="mono text-[10px] tracking-[0.35em] ink-soft mb-4">— QUEUE EMPTY —</div>
               <div className="display text-xl mb-6">AWAITING ORDERS</div>
               <div className="mono text-[10px] tracking-[0.2em] accent-color mb-8 blink">●</div>
-              <button onClick={seedDemoOrders} className="btn-primary">▸ SEED 8 DEMO ORDERS</button>
-              <div className="mono text-[9px] tracking-[0.25em] ink-soft mt-6 leading-relaxed">
-                CREATES 8 ORDERS WITH STAGGERED<br />TIMERS FROM 5S TO 18M
               </div>
-            </div>
+            
           ) : (
             <div>
               {orders.sort((a, b) => a.createdAt - b.createdAt).map((o, idx) => (
