@@ -479,16 +479,11 @@ function StaffView({ tick, onBack }: { tick: number; onBack: () => void }) {
 
       {tab === "active" && (
         <div>
-          <div className="px-5 py-3 border-b hairline flex items-center justify-between gap-3 flex-wrap" style={{ background: BRAND.paperDeep }}>
-            <div className="mono text-[9px] tracking-[0.3em] ink-soft">▸ DEMO CONTROLS</div>
-            <div className="flex gap-2">
-              <button onClick={seedDemoOrders} className="btn-ghost">+ SEED 8 ORDERS</button>
-              {orders.length > 0 && (
-                <button onClick={clearAllOrders} className="btn-ghost">CLEAR ALL</button>
-              )}
+          {orders.length > 0 && (
+            <div className="px-5 py-3 border-b hairline flex items-center justify-end" style={{ background: BRAND.paperDeep }}>
+              <button onClick={clearAllOrders} className="btn-ghost">CLEAR ALL</button>
             </div>
-          </div>
-
+          )}
           {orders.length === 0 ? (
             <div className="px-5 py-20 text-center">
               <div className="mono text-[10px] tracking-[0.35em] ink-soft mb-4">— QUEUE EMPTY —</div>
